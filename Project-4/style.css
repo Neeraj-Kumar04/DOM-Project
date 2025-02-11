@@ -1,0 +1,204 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url("./font/Gilroy-Regular.ttf") format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy', sans-serif;
+    color: white;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: rgb(0, 208, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#card {
+    height: 550px; 
+    width: 300px;
+    background-color: #fff;
+    border-radius: 30px; 
+    border: 9px solid #000;
+    position: relative;
+}
+
+#header {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+#stories {
+    height: 155px;
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 1.5px solid #dadada;
+    border-radius: 18px 18px 0 0;
+    padding: 41px 5px 0 5px;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    z-index: 1;
+}
+
+#stories::-webkit-scrollbar {
+    display: none;
+}
+
+.story {
+    height: 110px; 
+    width: 77px;
+    display: inline-block;
+    text-align: center;
+    margin: 5px;
+}
+
+.story img {
+    height: 85px;
+    width: 85px;
+    border-radius: 50%;
+    border: 3px solid red;
+    object-fit: cover;
+    object-position: top;
+}
+
+.story p {
+    margin-top: 1px;
+    font-size: 13px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+#full-screen {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 14px;
+    position: absolute;
+    display: none;
+}
+#copyright {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333; /* Dark gray for subtlety */
+    font-family: 'Gilroy', sans-serif;
+    background-color: rgba(0, 0, 0, 0.1); /* Transparent black background for highlight */
+    padding: 5px 0;
+    border-radius: 10px;
+}
+
+
+.time-line {
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    top: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    animation: timeline 3s linear forwards;
+}
+
+@keyframes time-line {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+/* Responsive Styles */
+
+/* Small screens (mobile devices) */
+@media (max-width: 600px) {
+    #card {
+        width: 90%;
+        height: 500px;
+        border-radius: 20px;
+    }
+
+    #header {
+        font-size: 14px;
+    }
+
+    #stories {
+        height: 130px;
+        padding: 30px 5px 0 5px;
+    }
+
+    .story {
+        width: 60px;
+    }
+
+    .story img {
+        height: 60px;
+        width: 60px;
+    }
+
+    .story p {
+        font-size: 11px;
+    }
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 900px) {
+    #card {
+        width: 70%;
+        height: 550px;
+    }
+
+    .story {
+        width: 70px;
+    }
+
+    .story img {
+        height: 70px;
+        width: 70px;
+    }
+
+    .story p {
+        font-size: 12px;
+    }
+}
+
+/* Large screens (desktops) */
+@media (min-width: 901px) {
+    #card {
+        width: 300px;
+    }
+
+    .story {
+        width: 77px;
+    }
+
+    .story img {
+        height: 85px;
+        width: 85px;
+    }
+
+    .story p {
+        font-size: 13px;
+    }
+}
