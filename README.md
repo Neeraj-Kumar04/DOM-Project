@@ -53,9 +53,11 @@ https://github.com/user-attachments/assets/92b35f14-a4bb-4c12-8d7c-b0dec11c05d3
 ### **4️⃣ Insta Story Feature**  
 A responsive layout mimicking Instagram's story carousel feature. Users can swipe through stories, complete with an interactive timeline.  
 
-**Features**:
-- Fully responsive design for all devices.
-- Interactive story timeline created with JavaScript.
+## ✨ Features  
+- Fully responsive design for all devices.  
+- Interactive story timeline created with JavaScript.  
+
+**🔗 Live Link:** [Insta Story Feature](https://instastory-flow.netlify.app)  
 
 
 
